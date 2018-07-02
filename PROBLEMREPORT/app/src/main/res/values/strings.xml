@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name"></string>
+    
+    <string-array name="Salpen">
+        <item>NOK</item>
+        <item>OK</item>
+    </string-array>
+
+    <string-array name="Keterangan">
+        <item>Kendala</item>
+        <item>Cancel</item>
+        <item>ODP Full</item>
+
+    </string-array>
+</resources>
