@@ -147,46 +147,45 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
-            <EditText
-                android:id="@+id/ETdate"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:background="#33B21900"
-                android:fontFamily="casual"
-                android:inputType="datetime"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp" />
-    <EditText
-        android:id="@+id/ETmonth"
+
+    <TextView
+        android:id="@+id/TVdate"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#33B21900"
+        android:fontFamily="casual"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <TextView
+        android:id="@+id/TVmonth"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
         android:background="#33B21900"
         android:fontFamily="casual"
-        android:inputType="datetime"
         android:paddingLeft="5dp"
         android:paddingRight="5dp" />
 
-    <EditText
-        android:id="@+id/ETyears"
+    <TextView
+        android:id="@+id/TVyears"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
         android:background="#33B21900"
         android:fontFamily="casual"
-        android:inputType="datetime"
         android:paddingLeft="5dp"
         android:paddingRight="5dp" />
 
     <Button
+        android:id="@+id/calendar"
         android:layout_width="39dp"
         android:layout_height="35dp"
-        android:onClick="showDatePickerDialog"
         android:layout_marginRight="10dp"
         android:background="@drawable/calender"
         />
