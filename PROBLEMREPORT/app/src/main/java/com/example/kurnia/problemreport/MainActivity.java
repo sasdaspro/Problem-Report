@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DateEdit = (EditText) findViewById(R.id.ETtanggal);
+        //DateEdit = (EditText) findViewById(R.id.ETtanggal);
         Spinner SPsalpen = (Spinner) findViewById(R.id.SPsalpen);
         Spinner SPketerangan = (Spinner) findViewById(R.id.SPketerangan);
 
