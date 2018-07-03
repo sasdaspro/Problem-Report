@@ -5,18 +5,10 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import java.util.Calendar;
-import android.os.Bundle;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.TimePickerDialog;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentActivity;
-import android.text.format.DateFormat;
 import android.view.View;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.TimePicker;
+
+
 
 public class MainActivity extends AppCompatActivity {
     static EditText DateEdit;
@@ -38,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         SPketerangan.setAdapter(myAdapter2);
 
+    }
+
+    public void showDatePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 }
 
