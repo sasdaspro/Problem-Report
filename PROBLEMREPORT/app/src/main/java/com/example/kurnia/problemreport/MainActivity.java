@@ -2,9 +2,11 @@ package com.example.kurnia.problemreport;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnCal, btnSave;
     int years,months, days;
-    static final int DIALOG_ID = 0;
+    static final int DIALOGCAL_ID = 0;
+    static final int DIALOGSAVE_ID = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,14 +55,14 @@ public class MainActivity extends AppCompatActivity {
         btnCal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog(DIALOG_ID);
+                showDialog(DIALOGCAL_ID);
             }
         });
     }
 
     @Override
     protected Dialog onCreateDialog(int id){
-        if (id == DIALOG_ID)
+        if (id == DIALOGCAL_ID)
             return new DatePickerDialog(this, dplistener, years, months, days);
         return null;
     }
@@ -81,34 +84,61 @@ public class MainActivity extends AppCompatActivity {
     };
 
     public void onClickSave(View v){
+
+        String nmTempat = "",alamat = "",nmTeknisi = "",cp = "",odp,salpen,keterangan,detail;
+
         final EditText etNamaTempat = (EditText) findViewById(R.id.ETnama_tempat);
-        String nmTempat = etNamaTempat.getText().toString();
+        if (TextUtils.isEmpty(etNamaTempat.getText())){
+            etNamaTempat.setError("Nama Tempat Kosong");
+        }else {
+            nmTempat = etNamaTempat.getText().toString();
+        }
 
         final EditText etAlamat = (EditText) findViewById(R.id.ETalamat);
-        String alamat = etAlamat.getText().toString();
+        if (TextUtils.isEmpty(etAlamat.getText())){
+            etAlamat.setError("Alamat Kosong");
+        }else {
+            alamat = etAlamat.getText().toString();
+        }
 
         final EditText etNamaTeknisi = (EditText) findViewById(R.id.ETnama_teknisi);
-        String nmTeknisi = etNamaTeknisi.getText().toString();
+        if (TextUtils.isEmpty(etNamaTeknisi.getText())){
+            etNamaTeknisi.setError("Nama Tempat Kosong");
+        }else {
+            nmTeknisi = etNamaTeknisi.getText().toString();
+        }
 
         final EditText etCP = (EditText) findViewById(R.id.ETcp);
-        String cp = etCP.getText().toString();
+        if (TextUtils.isEmpty(etCP.getText())){
+            etCP.setError("CP");
+        } else {
+            cp = etCP.getText().toString();
+        }
 
         final EditText etODP = (EditText) findViewById(R.id.ETodp_ondesk);
-        String odp = etODP.getText().toString();
+        odp = etODP.getText().toString();
 
         String tglLaporan = String.valueOf(new StringBuilder().append(days).append(" / ")
                 .append(months).append(" / ").append(years));
 
         final Spinner etSalpen = (Spinner) findViewById(R.id.SPsalpen);
-        String salpen = etSalpen.getSelectedItem().toString();
+        salpen = etSalpen.getSelectedItem().toString();
 
         final Spinner etKeterangan = (Spinner) findViewById(R.id.SPketerangan);
-        String keterangan = etKeterangan.getSelectedItem().toString();
+        keterangan = etKeterangan.getSelectedItem().toString();
 
         final EditText etDetail = (EditText) findViewById(R.id.ETdetails);
-        String detail = etDetail.getText().toString();
+        detail = etDetail.getText().toString();
 
-        System.out.println(nmTempat + " " + alamat + " " + nmTeknisi + " " + cp + " " + odp + " " + tglLaporan + " " + salpen + " " + keterangan + " " + detail);
+
+        System.out.println(nmTempat + " " + alamat + " " + nmTeknisi + " " + cp + " " + odp + " " +
+                tglLaporan + " " + salpen + " " + keterangan + " " + detail);
+
+        // Resetting Form
+        //finish();
+        //startActivity(new Intent(MainActivity.this, MainActivity.class));
     }
+
+
 
 }
