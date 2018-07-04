@@ -18,8 +18,8 @@ import java.util.Calendar;
 
 
 public class MainActivity extends AppCompatActivity {
-    static EditText DateEdit;
-    Button btn;
+
+    Button btnCal, btnSave;
     int years,months, days;
     static final int DIALOG_ID = 0;
 
@@ -28,13 +28,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //DateEdit = (EditText) findViewById(R.id.ETtanggal);
         Spinner SPsalpen = (Spinner) findViewById(R.id.SPsalpen);
         Spinner SPketerangan = (Spinner) findViewById(R.id.SPketerangan);
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Salpen));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         SPsalpen.setAdapter(myAdapter);
+
         ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Keterangan));
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         SPketerangan.setAdapter(myAdapter2);
@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showDialogOnButtonClick(){
-        btn = (Button)findViewById(R.id.calendar);
+        btnCal = (Button)findViewById(R.id.calendar);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btnCal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog(DIALOG_ID);
@@ -79,5 +79,36 @@ public class MainActivity extends AppCompatActivity {
             y.setText(new StringBuilder().append(years));
         }
     };
-}
 
+    public void onClickSave(View v){
+        final EditText etNamaTempat = (EditText) findViewById(R.id.ETnama_tempat);
+        String nmTempat = etNamaTempat.getText().toString();
+
+        final EditText etAlamat = (EditText) findViewById(R.id.ETalamat);
+        String alamat = etAlamat.getText().toString();
+
+        final EditText etNamaTeknisi = (EditText) findViewById(R.id.ETnama_teknisi);
+        String nmTeknisi = etNamaTeknisi.getText().toString();
+
+        final EditText etCP = (EditText) findViewById(R.id.ETcp);
+        String cp = etCP.getText().toString();
+
+        final EditText etODP = (EditText) findViewById(R.id.ETodp_ondesk);
+        String odp = etODP.getText().toString();
+
+        String tglLaporan = String.valueOf(new StringBuilder().append(days).append(" / ")
+                .append(months).append(" / ").append(years));
+
+        final Spinner etSalpen = (Spinner) findViewById(R.id.SPsalpen);
+        String salpen = etSalpen.getSelectedItem().toString();
+
+        final Spinner etKeterangan = (Spinner) findViewById(R.id.SPketerangan);
+        String keterangan = etKeterangan.getSelectedItem().toString();
+
+        final EditText etDetail = (EditText) findViewById(R.id.ETdetails);
+        String detail = etDetail.getText().toString();
+
+        System.out.println(nmTempat + " " + alamat + " " + nmTeknisi + " " + cp + " " + odp + " " + tglLaporan + " " + salpen + " " + keterangan + " " + detail);
+    }
+
+}

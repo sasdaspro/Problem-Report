@@ -16,7 +16,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -28,10 +28,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="Nama Tempat  "
+                android:text="@string/namTempat"
                 android:textColor="#000000"
-                />
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/ETnama_tempat"
@@ -41,6 +42,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
+                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -48,10 +50,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="Alamat "
+                android:text="@string/alamat"
                 android:textColor="#000000"
-                />
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/ETalamat"
@@ -61,6 +64,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
+                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -68,10 +72,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="Nama Teknisi "
+                android:text="@string/nmTeknisi"
                 android:textColor="#000000"
-                />
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/ETnama_teknisi"
@@ -81,6 +86,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
+                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -88,10 +94,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="Contact Person "
+                android:text="@string/CP"
                 android:textColor="#000000"
-                />
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/ETcp"
@@ -101,6 +108,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
+                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -108,10 +116,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="ODP ONDESK "
+                android:text="@string/ODP"
                 android:textColor="#000000"
-                />
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/ETodp_ondesk"
@@ -121,6 +130,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
+                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -128,55 +138,59 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="Tanggal Laporan (DD/MM/YYYY) "
+                android:text="@string/tgl"
                 android:textColor="#000000"
-                />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/TVdate"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:background="#33B21900"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp" />
+                <TextView
+                    android:id="@+id/TVdate"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#33B21900"
+                    android:fontFamily="casual"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" />
 
-    <TextView
-        android:id="@+id/TVmonth"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:background="#33B21900"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp" />
+                <TextView
+                    android:id="@+id/TVmonth"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#33B21900"
+                    android:fontFamily="casual"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" />
 
-    <TextView
-        android:id="@+id/TVyears"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:background="#33B21900"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp" />
+                <TextView
+                    android:id="@+id/TVyears"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#33B21900"
+                    android:fontFamily="casual"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" />
 
-    <Button
-        android:id="@+id/calendar"
-        android:layout_width="39dp"
-        android:layout_height="35dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/calender"
-        />
+                <Button
+                    android:id="@+id/calendar"
+                    android:layout_width="39dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/calender"
+                    />
 
-</LinearLayout>
+            </LinearLayout>
 
 
             <TextView
@@ -184,7 +198,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:paddingLeft="10dp"
-                android:text="Salpen"
+                android:text="@string/salpen"
                 android:textColor="#000000"
                 />
 
@@ -212,9 +226,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:paddingLeft="10dp"
-                android:text="Keterangan"
+                android:text="@string/ket"
                 android:textColor="#000000"
-                 />
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -240,10 +254,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="Detail"
+                android:text="@string/detail"
                 android:textColor="#000000"
-                />
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/ETdetails"
@@ -254,10 +269,12 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
+                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
             <Button
+                android:id="@+id/btnSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -265,7 +282,8 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
-                android:text="Save"
+                android:onClick="onClickSave"
+                android:text="@string/btnSave"
                 android:textColor="#ffffff" />
 
         </LinearLayout>

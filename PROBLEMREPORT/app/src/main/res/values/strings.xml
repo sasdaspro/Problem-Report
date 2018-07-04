@@ -12,4 +12,15 @@
         <item>ODP Full</item>
 
     </string-array>
+
+    <string name="namTempat">Nama Tempat :</string>
+    <string name="alamat">Alamat :</string>
+    <string name="nmTeknisi">Nama Teknisi :</string>
+    <string name="CP">Contact Person :</string>
+    <string name="ODP">ODP ONDESK :</string>
+    <string name="tgl">Tanggal Laporan (DD/MM/YYYY) :</string>
+    <string name="salpen">Salpen :</string>
+    <string name="ket">Keterangan :</string>
+    <string name="detail">Detail :</string>
+    <string name="btnSave">SAVE</string>
 </resources>
