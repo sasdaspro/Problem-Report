@@ -28,11 +28,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:paddingLeft="10dp"
                 android:text="Nama Tempat  "
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                />
 
             <EditText
                 android:id="@+id/ETnama_tempat"
@@ -42,7 +41,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
-                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -50,11 +48,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="casual"
                 android:paddingLeft="10dp"
                 android:text="Alamat "
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                />
 
             <EditText
                 android:id="@+id/ETalamat"
@@ -64,7 +61,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
-                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -72,11 +68,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="casual"
                 android:paddingLeft="10dp"
                 android:text="Nama Teknisi "
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                />
 
             <EditText
                 android:id="@+id/ETnama_teknisi"
@@ -86,7 +81,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
-                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -94,11 +88,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="casual"
                 android:paddingLeft="10dp"
                 android:text="Contact Person "
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                />
 
             <EditText
                 android:id="@+id/ETcp"
@@ -108,7 +101,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
-                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -116,11 +108,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="casual"
                 android:paddingLeft="10dp"
                 android:text="ODP ONDESK "
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                />
 
             <EditText
                 android:id="@+id/ETodp_ondesk"
@@ -130,7 +121,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
-                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
@@ -138,11 +128,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="casual"
                 android:paddingLeft="10dp"
                 android:text="Tanggal Laporan (DD/MM/YYYY) "
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                />
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -156,7 +145,6 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
         android:background="#33B21900"
-        android:fontFamily="casual"
         android:paddingLeft="5dp"
         android:paddingRight="5dp" />
 
@@ -167,7 +155,6 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
         android:background="#33B21900"
-        android:fontFamily="casual"
         android:paddingLeft="5dp"
         android:paddingRight="5dp" />
 
@@ -178,7 +165,6 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
         android:background="#33B21900"
-        android:fontFamily="casual"
         android:paddingLeft="5dp"
         android:paddingRight="5dp" />
 
@@ -197,11 +183,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="Salpen : "
+                android:text="Salpen"
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -210,19 +195,15 @@
 
                 <Spinner
                     android:id="@+id/SPsalpen"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
                     android:background="#33B21900"
-                    android:fontFamily="casual"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp" />
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/ic_action_name" />
 
             </LinearLayout>
 
@@ -230,11 +211,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="Keterangan : "
+                android:text="Keterangan"
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -243,19 +223,15 @@
 
                 <Spinner
                     android:id="@+id/SPketerangan"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
                     android:background="#33B21900"
-                    android:fontFamily="casual"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp" />
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/ic_action_name" />
 
             </LinearLayout>
 
@@ -264,11 +240,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="casual"
                 android:paddingLeft="10dp"
-                android:text="Detail : "
+                android:text="Detail"
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                />
 
             <EditText
                 android:id="@+id/ETdetails"
@@ -279,7 +254,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:background="#33B21900"
-                android:fontFamily="casual"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" />
 
