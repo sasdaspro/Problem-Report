@@ -143,9 +143,16 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println(nmTempat + " " + alamat + " " + nmTeknisi + " " + cp + " " + odp + " " +
                         tglLaporan + " " + salpen + " " + keterangan + " " + detail);
 
+                Toast.makeText(MainActivity.this,"Input berhasil",Toast.LENGTH_LONG).show();
+
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 // Resetting Form
-                //finish();
-                //startActivity(new Intent(MainActivity.this, MainActivity.class));
+                finish();
+                startActivity(new Intent(MainActivity.this, MainActivity.class));
 
             }
 
@@ -159,8 +166,4 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
-
-
-
-
 }
