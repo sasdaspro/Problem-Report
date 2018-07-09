@@ -14,8 +14,10 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
+import android.view.View;
 import android.widget.Toast;
-
 import java.util.Calendar;
 
 
@@ -83,61 +85,81 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    public void onClickSave(View v){
+    public void dialogSave (View view){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Konfirmasi");
+        alertDialogBuilder.setMessage("Apakah Anda Sudah Yakin...??");
+        alertDialogBuilder.setCancelable(false);
 
-        String nmTempat = "",alamat = "",nmTeknisi = "",cp = "",odp,salpen,keterangan,detail;
+        alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String nmTempat = "",alamat = "",nmTeknisi = "",cp = "",odp,salpen,keterangan,detail;
 
-        final EditText etNamaTempat = (EditText) findViewById(R.id.ETnama_tempat);
-        if (TextUtils.isEmpty(etNamaTempat.getText())){
-            etNamaTempat.setError("Nama Tempat Kosong");
-        }else {
-            nmTempat = etNamaTempat.getText().toString();
-        }
+                final EditText etNamaTempat = (EditText) findViewById(R.id.ETnama_tempat);
+                if (TextUtils.isEmpty(etNamaTempat.getText())){
+                    etNamaTempat.setError("Nama Tempat Kosong");
+                }else {
+                    nmTempat = etNamaTempat.getText().toString();
+                }
 
-        final EditText etAlamat = (EditText) findViewById(R.id.ETalamat);
-        if (TextUtils.isEmpty(etAlamat.getText())){
-            etAlamat.setError("Alamat Kosong");
-        }else {
-            alamat = etAlamat.getText().toString();
-        }
+                final EditText etAlamat = (EditText) findViewById(R.id.ETalamat);
+                if (TextUtils.isEmpty(etAlamat.getText())){
+                    etAlamat.setError("Alamat Kosong");
+                }else {
+                    alamat = etAlamat.getText().toString();
+                }
 
-        final EditText etNamaTeknisi = (EditText) findViewById(R.id.ETnama_teknisi);
-        if (TextUtils.isEmpty(etNamaTeknisi.getText())){
-            etNamaTeknisi.setError("Nama Tempat Kosong");
-        }else {
-            nmTeknisi = etNamaTeknisi.getText().toString();
-        }
+                final EditText etNamaTeknisi = (EditText) findViewById(R.id.ETnama_teknisi);
+                if (TextUtils.isEmpty(etNamaTeknisi.getText())){
+                    etNamaTeknisi.setError("Nama Tempat Kosong");
+                }else {
+                    nmTeknisi = etNamaTeknisi.getText().toString();
+                }
 
-        final EditText etCP = (EditText) findViewById(R.id.ETcp);
-        if (TextUtils.isEmpty(etCP.getText())){
-            etCP.setError("CP");
-        } else {
-            cp = etCP.getText().toString();
-        }
+                final EditText etCP = (EditText) findViewById(R.id.ETcp);
+                if (TextUtils.isEmpty(etCP.getText())){
+                    etCP.setError("CP");
+                } else {
+                    cp = etCP.getText().toString();
+                }
 
-        final EditText etODP = (EditText) findViewById(R.id.ETodp_ondesk);
-        odp = etODP.getText().toString();
+                final EditText etODP = (EditText) findViewById(R.id.ETodp_ondesk);
+                odp = etODP.getText().toString();
 
-        String tglLaporan = String.valueOf(new StringBuilder().append(days).append(" / ")
-                .append(months).append(" / ").append(years));
+                String tglLaporan = String.valueOf(new StringBuilder().append(days).append(" / ")
+                        .append(months).append(" / ").append(years));
 
-        final Spinner etSalpen = (Spinner) findViewById(R.id.SPsalpen);
-        salpen = etSalpen.getSelectedItem().toString();
+                final Spinner etSalpen = (Spinner) findViewById(R.id.SPsalpen);
+                salpen = etSalpen.getSelectedItem().toString();
 
-        final Spinner etKeterangan = (Spinner) findViewById(R.id.SPketerangan);
-        keterangan = etKeterangan.getSelectedItem().toString();
+                final Spinner etKeterangan = (Spinner) findViewById(R.id.SPketerangan);
+                keterangan = etKeterangan.getSelectedItem().toString();
 
-        final EditText etDetail = (EditText) findViewById(R.id.ETdetails);
-        detail = etDetail.getText().toString();
+                final EditText etDetail = (EditText) findViewById(R.id.ETdetails);
+                detail = etDetail.getText().toString();
 
 
-        System.out.println(nmTempat + " " + alamat + " " + nmTeknisi + " " + cp + " " + odp + " " +
-                tglLaporan + " " + salpen + " " + keterangan + " " + detail);
+                System.out.println(nmTempat + " " + alamat + " " + nmTeknisi + " " + cp + " " + odp + " " +
+                        tglLaporan + " " + salpen + " " + keterangan + " " + detail);
 
-        // Resetting Form
-        //finish();
-        //startActivity(new Intent(MainActivity.this, MainActivity.class));
+                // Resetting Form
+                //finish();
+                //startActivity(new Intent(MainActivity.this, MainActivity.class));
+
+            }
+
+        });
+        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this,"Canceled",Toast.LENGTH_SHORT).show();
+            }
+        });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
+
 
 
 
