@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     public void dialogSave (View view){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Konfirmasi");
-        alertDialogBuilder.setMessage("Apakah Anda Sudah Yakin...??");
+        alertDialogBuilder.setMessage("Apakah anda sudah yakin ?");
         alertDialogBuilder.setCancelable(false);
 
         alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
